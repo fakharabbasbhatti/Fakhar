@@ -1,5 +1,5 @@
 import './App.css'
-import Navbar from './components/navber'
+import Navbar from './components/navbar'
 import HeroSection from './components/HeroSection'
 import AboutMe from './components/AboutMe'
 import MySkills from './components/MySkills'

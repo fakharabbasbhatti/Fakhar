@@ -18,38 +18,56 @@ const MyServices = () => {
     {
       icon: <FaCode className="text-3xl" />,
       title: "Frontend Development",
-      description: "Create modern, responsive, and interactive user interfaces using React.js, Tailwind CSS, and Bootstrap with a focus on speed and engagement.",
-      gradient: "from-blue-500 to-cyan-400"
+      description: "Crafting highly responsive and interactive interfaces using React.js, Tailwind CSS, and Bootstrap to deliver fast and engaging web experiences.",
+      gradient: "from-blue-500 to-cyan-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-right",
+      aosDesc: "fade-up"
     },
     {
       icon: <FaServer className="text-3xl" />,
       title: "Backend Development",
-      description: "Build robust RESTful APIs with Node.js and Express.js, integrating MongoDB for efficient data management and secure backend functionality.",
-      gradient: "from-indigo-500 to-blue-400"
+      description: "Designing robust and scalable RESTful APIs with Node.js and Express, coupled with MongoDB for secure and efficient data management.",
+      gradient: "from-indigo-500 to-blue-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-left",
+      aosDesc: "fade-up"
     },
     {
       icon: <FaPlug className="text-3xl" />,
       title: "API Integration",
-      description: "Seamlessly integrate third-party APIs, payment gateways, and authentication systems to enhance application features and connectivity.",
-      gradient: "from-teal-500 to-emerald-400"
+      description: "Seamlessly integrating third-party APIs, payment gateways, and authentication systems for enhanced app functionality.",
+      gradient: "from-teal-500 to-emerald-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-up",
+      aosDesc: "fade-right"
     },
     {
       icon: <FaMobileAlt className="text-3xl" />,
       title: "Responsive Design",
-      description: "Ensure a smooth and consistent user experience across all devices with fully responsive, mobile-friendly web applications.",
-      gradient: "from-sky-500 to-blue-400"
+      description: "Ensuring consistent, device-friendly layouts and interactions for a smooth user experience across all platforms.",
+      gradient: "from-sky-500 to-blue-400",
+      aosIcon: "zoom-in",
+      aosTitle: "flip-left",
+      aosDesc: "fade-up"
     },
     {
       icon: <SiWordpress className="text-3xl" />,
       title: "WordPress Development",
-      description: "Customizable website and blog development using this popular CMS with strong global community support and extensive plugin ecosystem.",
-      gradient: "from-blue-600 to-indigo-500"
+      description: "Building fully customizable websites and blogs with WordPress, leveraging its vast plugin ecosystem and global support.",
+      gradient: "from-blue-600 to-indigo-500",
+      aosIcon: "zoom-in",
+      aosTitle: "flip-right",
+      aosDesc: "fade-up"
     },
     {
       icon: <FaCloudUploadAlt className="text-3xl" />,
       title: "Deployment & Maintenance",
-      description: "Deploy applications on Vercel, Netlify, and AWS, providing continuous updates, optimizations, and security maintenance.",
-      gradient: "from-violet-500 to-purple-400"
+      description: "Deploying apps on Vercel, Netlify, and AWS with continuous updates, optimizations, and security enhancements.",
+      gradient: "from-violet-500 to-purple-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-down",
+      aosDesc: "fade-up"
     }
   ];
 
@@ -63,42 +81,53 @@ const MyServices = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 
-              data-aos="fade-up"
-              className="text-4xl md:text-5xl font-bold text-white mb-4 relative inline-block group"
+              data-aos="fade-down"
+              className="text-4xl md:text-5xl font-extrabold text-white mb-4 relative inline-block group"
             >
-              My <span className="text-[#38bdf8]">Services</span>
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-[#38bdf8] transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
+              Our <span data-aos="zoom-in" data-aos-delay="100" className="text-[#38bdf8]">Services</span>
             </h1>
             <p 
               data-aos="fade-up"
-              data-aos-delay="100"
+              data-aos-delay="150"
               className="text-gray-400 text-lg max-w-2xl mx-auto"
             >
-              Comprehensive solutions to bring your digital vision to life
+              Delivering tailored digital solutions to empower your business growth and innovation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
               <div
                 key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-                className="group relative overflow-hidden bg-gray-800 rounded-xl p-8 h-full transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:shadow-[#38bdf8]/20"
+                className="group relative overflow-hidden bg-gray-800 rounded-2xl p-8 h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#38bdf8]/30"
               >
-                <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
                 
                 <div className="relative z-10">
-                  <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-2xl bg-gray-700 group-hover:bg-white transition-all duration-500">
-                    <span className="text-[#38bdf8] group-hover:scale-110 transition-transform duration-500">
+                  <div 
+                    data-aos={service.aosIcon} 
+                    data-aos-delay={index * 100}
+                    className="w-16 h-16 mb-6 flex items-center justify-center rounded-2xl bg-gray-700 group-hover:bg-white transition-all duration-500"
+                  >
+                    <span className="text-[#38bdf8] group-hover:scale-125 transition-transform duration-500">
                       {service.icon}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300">{service.description}</p>
-                  
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#38bdf8] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <h3 
+                    data-aos={service.aosTitle} 
+                    data-aos-delay={index * 150} 
+                    className="text-2xl font-semibold text-white mb-3"
+                  >
+                    {service.title}
+                  </h3>
+                  <p 
+                    data-aos={service.aosDesc} 
+                    data-aos-delay={index * 200} 
+                    className="text-gray-300 text-sm md:text-base"
+                  >
+                    {service.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -108,27 +137,15 @@ const MyServices = () => {
 
       <style jsx global>{`
         @keyframes float {
-          0%, 100% {
-            transform: translateY(0) translateX(0);
-          }
-          50% {
-            transform: translateY(-20px) translateX(10px);
-          }
+          0%, 100% { transform: translateY(0) translateX(0); }
+          50% { transform: translateY(-20px) translateX(10px); }
         }
         @keyframes float-delay {
-          0%, 100% {
-            transform: translateY(0) translateX(0);
-          }
-          50% {
-            transform: translateY(-20px) translateX(10px);
-          }
+          0%, 100% { transform: translateY(0) translateX(0); }
+          50% { transform: translateY(-20px) translateX(10px); }
         }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        .animate-float-delay {
-          animation: float-delay 10s ease-in-out infinite 2s;
-        }
+        .animate-float { animation: float 8s ease-in-out infinite; }
+        .animate-float-delay { animation: float-delay 10s ease-in-out infinite 2s; }
       `}</style>
     </Fragment>
   );

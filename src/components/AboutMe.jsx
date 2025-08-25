@@ -1,7 +1,7 @@
 import { Fragment, useEffect } from "react";
-import About from "../Images/fakhar.png";
+import About from "../Images/fakharabbas.jpeg";
 import resume from "../Images/FakharAbbas.pdf";
-import { FaDownload, FaUserTie, FaCode, FaPalette } from "react-icons/fa";
+import { FaDownload, FaUserTie, FaCode, FaPalette, FaWordpress } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -32,9 +32,9 @@ const AboutMe = () => {
       aos: "fade-right",
     },
     {
-      icon: <FaCode className="text-[#38bdf8] text-xl sm:text-2xl" />,
-      title: "Clean Code",
-      description: "Writing maintainable and efficient code",
+      icon: <FaWordpress className="text-[#21759b] text-xl sm:text-2xl" />,
+      title: "WordPress",
+      description: "Custom themes, plugins & CMS-based solutions",
       aos: "fade-up",
     },
     {
@@ -81,6 +81,21 @@ const AboutMe = () => {
                 />
                 <div className="absolute inset-0 rounded-full border-4 border-[#38bdf8] opacity-30 z-0 animate-pulse"></div>
                 <div className="absolute inset-0 rounded-full border-4 border-[#38bdf8] opacity-15 z-0 animate-pulse-delay"></div>
+
+                {/* Badges inside image */}
+                <span
+                  data-aos="fade-down"
+                  className="absolute top-3 left-3 bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-white text-xs sm:text-sm px-3 py-1 rounded-full shadow-md font-medium z-20"
+                >
+                  Frontend Developer
+                </span>
+                <span
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  className="absolute bottom-3 right-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs sm:text-sm px-3 py-1 rounded-full shadow-md font-medium z-20"
+                >
+                  WordPress Expert
+                </span>
               </div>
             </div>
 
@@ -89,18 +104,18 @@ const AboutMe = () => {
               {/* Name */}
               <h2
                 data-aos="zoom-in"
-                className="text-2xl sm:text-3xl  font-bold text-white"
+                className="text-2xl sm:text-3xl font-bold text-white"
               >
                 I'm <span className="text-[#38bdf8]">Fakhar Abbas</span>, a
-                passionate Frontend Developer
+                passionate Frontend Developer & WordPress Specialist
               </h2>
 
               {/* Description */}
               <p
                 data-aos="zoom-in-up"
-                className="text-gray-300 text-base sm:text-lg  leading-relaxed"
+                className="text-gray-300 text-base sm:text-lg leading-relaxed"
               >
-                Specializing in React.js, I craft exceptional digital
+                Specializing in React.js & WordPress, I craft exceptional digital
                 experiences with clean, efficient code and pixel-perfect
                 designs. My approach combines technical expertise with creative
                 problem-solving to deliver intuitive, high-performance web
@@ -134,7 +149,7 @@ const AboutMe = () => {
                 <button
                   onClick={handleDownload}
                   data-aos="flip-up"
-                  className="mt-8 bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] hover:from-[#0ea5e9] hover:to-[#38bdf8] text-white px-6  py-2 sm:py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-500 transform hover:scale-110 shadow-lg hover:shadow-[#38bdf8]/40"
+                  className="mt-8 bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] hover:from-[#0ea5e9] hover:to-[#38bdf8] text-white px-6 py-2 sm:py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-500 transform hover:scale-110 shadow-lg hover:shadow-[#38bdf8]/40"
                 >
                   Download CV <FaDownload />
                 </button>

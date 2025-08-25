@@ -1,12 +1,7 @@
 import { Fragment, useEffect } from "react";
-import { FaPaperPlane, FaRocket } from "react-icons/fa";
+import { FaPaperPlane, FaRocket, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-import Hero from "../Images/fakhar.png";
-import {
-  FaFacebookF,
-  FaGithub,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import Hero from "../Images/fakharabbas.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -29,18 +24,13 @@ const HeroSection = () => {
     },
     {
       icon: <FaLinkedinIn className="h-5 w-5" />,
-      onClick: () =>
-        window.open(
-          "https://linkedin.com/in/fakhar-abbas-bhatti",
-          "_blank"
-        ),
+      onClick: () => window.open("https://linkedin.com/in/fakhar-abbas-bhatti", "_blank"),
       color: "hover:bg-blue-500 hover:shadow-[0_0_15px_#38bdf8]",
       aos: "flip-up",
     },
     {
       icon: <FaGithub className="h-5 w-5" />,
-      onClick: () =>
-        window.open("https://github.com/fakharabbasbhatti", "_blank"),
+      onClick: () => window.open("https://github.com/fakharabbasbhatti", "_blank"),
       color: "hover:bg-gray-800 hover:shadow-[0_0_15px_#6b7280]",
       aos: "flip-right",
     },
@@ -48,7 +38,7 @@ const HeroSection = () => {
 
   return (
     <Fragment>
-      <div
+      <section
         id="home"
         className="relative flex justify-center items-center min-h-screen 
                    px-6 sm:px-8 md:px-12 lg:px-20 bg-gray-900 overflow-hidden pt-10 sm:pt-20"
@@ -67,7 +57,8 @@ const HeroSection = () => {
           ></div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-12 w-full max-w-7xl z-10 py-20">
+        {/* ✅ Changed flex direction */}
+        <div className="flex flex-col-reverse md:flex-row items-center gap-12 w-full max-w-7xl z-10 py-20">
           {/* Left Section */}
           <div className="w-full md:w-1/2 text-center md:text-start">
             <span
@@ -79,8 +70,7 @@ const HeroSection = () => {
 
             <h1
               data-aos="fade-right"
-              className="text-white text-3xl sm:text-4xl md:text-6xl 
-                         font-bold leading-tight mb-4"
+              className="text-white text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-4"
             >
               Fakhar Abbas
             </h1>
@@ -91,13 +81,8 @@ const HeroSection = () => {
             >
               <span className="text-white">
                 <Typewriter
-                  words={[
-                    "Front-End Developer",
-                    "UI/UX Designer",
-                    "React Specialist",
-                    "Web Enthusiast",
-                  ]}
-                  loop={true}
+                  words={["Front-End Developer", "UI/UX Designer", "React Specialist", "Web Enthusiast"]}
+                  loop
                   cursor
                   cursorStyle="_"
                   typeSpeed={70}
@@ -111,47 +96,37 @@ const HeroSection = () => {
               data-aos="fade-up"
               className="text-gray-300 text-base sm:text-lg mb-8 max-w-lg mx-auto md:mx-0"
             >
-              I craft{" "}
-              <span className="text-[#38bdf8] font-semibold">modern</span> &{" "}
-              <span className="text-[#0ea5e9] font-semibold">
-                responsive
-              </span>{" "}
-              websites. Focused on clean code, smooth animations &
-              intuitive interfaces.
+              I design modern, responsive websites with clean code,<span className="text-[#38bdf8] font-semibold"> fluid animations </span> &
+              <span className="text-[#0ea5e9] font-semibold"> intuitive user experiences, </span>  
+                  delivering engaging digital solutions that merge creativity, performance, and seamless functionality.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-row gap-3 sm:gap-4 mb-10 justify-center sm:justify-start">
-              {/* Contact Me Button */}
+              {/* Contact Me */}
               <button
                 data-aos="fade-down"
                 className="relative bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] 
-               text-white px-4 py-2 sm:px-6 sm:py-3 
-               rounded-full font-semibold text-sm sm:text-base 
-               flex items-center gap-2 
-               transition-all duration-500 transform hover:scale-110 
-               shadow-lg overflow-hidden group text-center"
+                           text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold 
+                           text-sm sm:text-base flex items-center gap-2 transition-all duration-500 
+                           transform hover:scale-110 shadow-lg overflow-hidden group"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
-                     translate-x-[-120%] group-hover:translate-x-[120%] 
-                     transition-transform duration-700 ease-in-out"></span>
+                               -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-700 ease-in-out"></span>
                 <FaPaperPlane className="z-10" />
                 <span className="z-10">Contact Me</span>
               </button>
 
-              {/* View Projects Button */}
+              {/* View Projects */}
               <button
                 data-aos="fade-up"
-                className="relative border-2 border-[#38bdf8] text-[#38bdf8] 
-               px-4 py-2 sm:px-6 sm:py-3 
-               rounded-full font-semibold text-sm sm:text-base 
-               flex items-center gap-2
-               transition-all duration-500 transform hover:scale-110 
-               hover:bg-[#38bdf8] hover:text-white shadow-md group text-center"
+                className="relative border-2 border-[#38bdf8] text-[#38bdf8] px-4 py-2 sm:px-6 sm:py-3 
+                           rounded-full font-semibold text-sm sm:text-base flex items-center gap-2 
+                           transition-all duration-500 transform hover:scale-110 hover:bg-[#38bdf8] 
+                           hover:text-white shadow-md group"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
-                     translate-x-[-120%] group-hover:translate-x-[120%] 
-                     transition-transform duration-700 ease-in-out"></span>
+                               -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-700 ease-in-out"></span>
                 <FaRocket className="z-10" />
                 <span className="z-10">View Projects</span>
               </button>
@@ -171,9 +146,9 @@ const HeroSection = () => {
                     key={index}
                     data-aos={item.aos}
                     onClick={item.onClick}
+                    aria-label="Social Link"
                     className={`text-white cursor-pointer flex justify-center items-center bg-gray-800 ${item.color} 
-                               h-10 w-10 sm:h-12 sm:w-12 rounded-full 
-                               transition-all duration-500 transform hover:scale-110`}
+                               h-10 w-10 sm:h-12 sm:w-12 rounded-full transition-all duration-500 transform hover:scale-110`}
                   >
                     {item.icon}
                   </button>
@@ -183,90 +158,57 @@ const HeroSection = () => {
           </div>
 
           {/* Right Section (Hero Image) */}
-          <div
-            data-aos="zoom-in"
-            className="w-full md:w-1/2 flex justify-center relative"
-          >
+          <div data-aos="zoom-in" className="w-full md:w-1/2 flex justify-center relative">
             <div className="relative h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px] animate-float-slow group">
               <div className="absolute inset-0 rounded-full border-4 border-[#38bdf8] opacity-30 animate-pulse"></div>
               <div className="absolute inset-0 rounded-full border-4 border-[#0ea5e9] opacity-20 animate-pulse-delay"></div>
 
               {/* Hover Glow */}
-              <div className="absolute inset-0 rounded-full scale-0 group-hover:scale-110 
-                              opacity-0 group-hover:opacity-80 transition-all duration-700
-                              bg-gradient-to-r from-[#38bdf8] via-[#0ea5e9] to-[#38bdf8] blur-3xl">
-              </div>
+              <div className="absolute inset-0 rounded-full scale-0 group-hover:scale-110 opacity-0 group-hover:opacity-80 transition-all duration-700 bg-gradient-to-r from-[#38bdf8] via-[#0ea5e9] to-[#38bdf8] blur-3xl"></div>
 
+              {/* Profile Image */}
               <img
                 src={Hero}
-                alt="Fakhar Abbas"
-                className="w-full h-full object-cover rounded-full border-4 border-[#38bdf8] 
-                           shadow-2xl relative transform transition-all duration-700 
-                           group-hover:scale-105 group-hover:rotate-3 p-3 sm:p-5"
+                alt="Fakhar Abbas profile"
+                className="w-full h-full object-cover rounded-full border-4 border-[#38bdf8] shadow-2xl relative transition-all duration-700 group-hover:scale-105 group-hover:rotate-3 p-3 sm:p-5"
               />
+
+              {/* Badges */}
+              <div className="absolute top-2 left-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs sm:text-sm md:text-base font-semibold px-3 py-1 rounded-full shadow-lg">
+                Frontend Developer
+              </div>
+              <div className="absolute bottom-2 right-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs sm:text-sm md:text-base font-semibold px-3 py-1 rounded-full shadow-lg">
+                WordPress Expert
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Animations */}
-      <style jsx global>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0) translateX(0);
+        {/* Animations */}
+        <style jsx global>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-20px) translateX(10px); }
           }
-          50% {
-            transform: translateY(-20px) translateX(10px);
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
           }
-        }
-        @keyframes float-slow {
-          0%,
-          100% {
-            transform: translateY(0);
+          @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
           }
-          50% {
-            transform: translateY(-15px);
+          @keyframes pulse-delay {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.1); }
           }
-        }
-        @keyframes pulse {
-          0%,
-          100% {
-            opacity: 0.3;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.6;
-            transform: scale(1.05);
-          }
-        }
-        @keyframes pulse-delay {
-          0%,
-          100% {
-            opacity: 0.2;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.4;
-            transform: scale(1.1);
-          }
-        }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        .animate-float-delay {
-          animation: float 10s ease-in-out infinite 2s;
-        }
-        .animate-float-slow {
-          animation: float-slow 6s ease-in-out infinite;
-        }
-        .animate-pulse {
-          animation: pulse 4s ease-in-out infinite;
-        }
-        .animate-pulse-delay {
-          animation: pulse-delay 5s ease-in-out infinite 1s;
-        }
-      `}</style>
+          .animate-float { animation: float 8s ease-in-out infinite; }
+          .animate-float-delay { animation: float 10s ease-in-out infinite 2s; }
+          .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+          .animate-pulse { animation: pulse 4s ease-in-out infinite; }
+          .animate-pulse-delay { animation: pulse-delay 5s ease-in-out infinite 1s; }
+        `}</style>
+      </section>
     </Fragment>
   );
 };

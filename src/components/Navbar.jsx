@@ -1,5 +1,6 @@
 import { Fragment, useState, useEffect } from "react"; 
 import { IoMdMenu } from "react-icons/io";
+import { IoLogoAmplify } from "react-icons/io5";
 import { IoCloseSharp, IoLogoBuffer } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
@@ -55,7 +56,7 @@ const Navbar = () => {
           >
             {/* Logo Icon */}
             <div className="relative">
-              <IoLogoBuffer
+              <IoLogoAmplify
                 className="text-[#38bdf8] text-3xl relative z-10 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_#38bdf8]"
               />
               {/* Glow Ring */}

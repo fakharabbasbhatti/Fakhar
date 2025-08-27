@@ -1,5 +1,6 @@
 // Footer.jsx
 import React, { useEffect } from "react";
+import { FaUser } from "react-icons/fa";
 import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaHeart } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 import AOS from "aos";
@@ -13,15 +14,23 @@ const socialLinks = [
 
 const quickLinks = [
   { name: "Home", href: "#home" },
-  { name: "Projects", href: "#projects" },
+  { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "#contact" },
-  { name: "Blog", href: "#blog" },
+  { name: "Resume", href: "#resume" },
+  { name: "Services", href: "#services" },
+  { name: "Projects", href: "#projects" },
+];
+
+const customerService = [
+  { name: "Customer Service", href: "" },
+  { name: "FAQs", href: "" },
+  { name: "Privacy Policy", href: "" },
+  { name: "Terms & Conditions", href: "" },
 ];
 
 const Footer = () => {
   useEffect(() => {
-    AOS.init({ offset: 100, duration: 800, easing: 'ease-in-out', once: true });
+    AOS.init({ offset: 100, duration: 800, easing: "ease-in-out", once: true });
   }, []);
 
   return (
@@ -31,13 +40,13 @@ const Footer = () => {
       <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-[#0ea5e9] opacity-10 rounded-full blur-3xl animate-float-delay"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 ">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* About Me */}
           <div data-aos="fade-up" className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-6 flex items-center justify-center md:justify-start">
-              <FaCode className="mr-3 text-[#38bdf8]" /> About Me
+              <FaUser className="mr-3 text-[#38bdf8]" /> About Me
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed text-lg">
               Passionate developer building modern web apps. Focused on clean code, responsive design, and seamless user experience.
             </p>
           </div>
@@ -47,7 +56,26 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
-                <li key={index} className="transition-transform duration-300 hover:translate-x-2 flex items-center justify-center md:justify-start text-lg text-gray-400 hover:text-[#38bdf8]">
+                <li
+                  key={index}
+                  className="transition-transform duration-300 hover:translate-x-2 flex items-center justify-center md:justify-start text-lg text-gray-400 hover:text-[#38bdf8]"
+                >
+                  <FaAngleRight className="mr-2" />
+                  <a href={link.href}>{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Customer Service */}
+          <div data-aos="fade-up" data-aos-delay="150" className="text-center md:text-left">
+            <h3 className="text-2xl font-bold mb-6">Customer Service</h3>
+            <ul className="space-y-3">
+              {customerService.map((link, index) => (
+                <li
+                  key={index}
+                  className="transition-transform duration-300 hover:translate-x-2 flex items-center justify-center md:justify-start text-lg text-gray-400 hover:text-[#38bdf8]"
+                >
                   <FaAngleRight className="mr-2" />
                   <a href={link.href}>{link.name}</a>
                 </li>
@@ -77,26 +105,36 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div data-aos="fade-up" className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400 mb-2">&copy; {new Date().getFullYear()} Fakhar Abbas. All rights reserved.</p>
-          <p className="text-gray-400 flex items-center justify-center">
-            Crafted with <FaHeart className="text-[#38bdf8] mx-2 animate-pulse" /> using React & Tailwind CSS
-          </p>
-        </div>
+        <p data-aos="fade-up" className="border-t border-gray-800 pt-8 text-center">
+          Made with <span className="">❤️</span> by <span className="font-bold">Fakhar Abbas</span> &copy; {new Date().getFullYear()}
+        </p>
       </div>
+
 
       {/* Floating Circle Animations */}
       <style jsx global>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0) translateX(0); }
-          50% { transform: translateY(-20px) translateX(10px); }
+          0%, 100% {
+            transform: translateY(0) translateX(0);
+          }
+          50% {
+            transform: translateY(-20px) translateX(10px);
+          }
         }
         @keyframes float-delay {
-          0%, 100% { transform: translateY(0) translateX(0); }
-          50% { transform: translateY(-25px) translateX(15px); }
+          0%, 100% {
+            transform: translateY(0) translateX(0);
+          }
+          50% {
+            transform: translateY(-25px) translateX(15px);
+          }
         }
-        .animate-float { animation: float 8s ease-in-out infinite; }
-        .animate-float-delay { animation: float-delay 10s ease-in-out infinite 2s; }
+        .animate-float {
+          animation: float 8s ease-in-out infinite;
+        }
+        .animate-float-delay {
+          animation: float-delay 10s ease-in-out infinite 2s;
+        }
       `}</style>
     </footer>
   );

@@ -2,6 +2,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Fragment, useEffect } from "react";
 import { FaCode, FaServer, FaPlug, FaMobileAlt, FaCloudUploadAlt } from "react-icons/fa";
+import { MdAnimation } from "react-icons/md";
+import { SiFastapi } from "react-icons/si";
 import { SiWordpress } from "react-icons/si";
 
 const MyServices = () => {
@@ -18,52 +20,54 @@ const MyServices = () => {
     {
       icon: <FaCode className="text-3xl" />,
       title: "Frontend Development",
-      description: "Crafting highly responsive and interactive interfaces using React.js, Tailwind CSS, and Bootstrap to deliver fast and engaging web experiences.",
+      description: "Building responsive, interactive interfaces with React.js, Tailwind CSS, and Bootstrap to deliver seamless, fast, and engaging digital experiences.",
       gradient: "from-blue-500 to-cyan-400",
       aosIcon: "zoom-in",
       aosTitle: "fade-right",
       aosDesc: "fade-up"
     },
-    {
-      icon: <FaServer className="text-3xl" />,
-      title: "Backend Development",
-      description: "Designing robust and scalable RESTful APIs with Node.js and Express, coupled with MongoDB for secure and efficient data management.",
-      gradient: "from-indigo-500 to-blue-400",
+ {
+      icon: <SiWordpress className="text-3xl" />,
+      title: "WordPress Development",
+      description: "Developing fully customized, scalable websites and blogs with WordPress, leveraging its extensive plugin ecosystem and strong global community support.",
+      gradient: "from-blue-600 to-indigo-500",
       aosIcon: "zoom-in",
-      aosTitle: "fade-left",
+      aosTitle: "flip-right",
       aosDesc: "fade-up"
     },
-    {
-      icon: <FaPlug className="text-3xl" />,
+     {
+      icon: <SiFastapi className="text-3xl" />,
       title: "API Integration",
-      description: "Seamlessly integrating third-party APIs, payment gateways, and authentication systems for enhanced app functionality.",
+      description: "Seamlessly integrating third-party APIs, secure payment gateways, and robust authentication systems to enhance functionality, scalability, and user experience.",
       gradient: "from-teal-500 to-emerald-400",
       aosIcon: "zoom-in",
       aosTitle: "fade-up",
       aosDesc: "fade-right"
     },
     {
+      icon: <MdAnimation className="text-3xl" />,
+      title: "Immersive Animations",
+      description: "Creating immersive digital experiences through animations, micro-interactions, and motion design using Framer Motion, GSAP, AOS, and advanced CSS techniques.",
+      gradient: "from-indigo-500 to-blue-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-left",
+      aosDesc: "fade-up"
+    },
+   
+    {
       icon: <FaMobileAlt className="text-3xl" />,
       title: "Responsive Design",
-      description: "Ensuring consistent, device-friendly layouts and interactions for a smooth user experience across all platforms.",
+      description: "Ensuring consistent, responsive, and device-friendly layouts with optimized interactions to deliver seamless, user-focused experiences across all platforms.",
       gradient: "from-sky-500 to-blue-400",
       aosIcon: "zoom-in",
       aosTitle: "flip-left",
       aosDesc: "fade-up"
     },
-    {
-      icon: <SiWordpress className="text-3xl" />,
-      title: "WordPress Development",
-      description: "Building fully customizable websites and blogs with WordPress, leveraging its vast plugin ecosystem and global support.",
-      gradient: "from-blue-600 to-indigo-500",
-      aosIcon: "zoom-in",
-      aosTitle: "flip-right",
-      aosDesc: "fade-up"
-    },
+   
     {
       icon: <FaCloudUploadAlt className="text-3xl" />,
       title: "Deployment & Maintenance",
-      description: "Deploying apps on Vercel, Netlify, and AWS with continuous updates, optimizations, and security enhancements.",
+      description: "Deploying applications on Vercel, Netlify, and AWS with continuous updates, performance optimizations, robust monitoring, and advanced security enhancements",
       gradient: "from-violet-500 to-purple-400",
       aosIcon: "zoom-in",
       aosTitle: "fade-down",

@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 
 // Import your project images
 import img1 from "../Images/shiping.jpg";
-import img2 from "../Images/ideatech.png";
-import img3 from "../Images/itservices.png";
-import img4 from "../Images/organiccotton.png";
-import img5 from "../Images/videomeeting.png";
-import img6 from "../Images/exclusivestores.png";
+import img2 from "../Images/lawyer.png";
+import img3 from "../Images/lundary.png";
+import img4 from "../Images/charity.jpeg";
+import img5 from "../Images/carrent.png";
+import img6 from "../Images/foodymat.png";
 
 const MyProjects = () => {
   useEffect(() => {
@@ -30,33 +30,33 @@ const MyProjects = () => {
     },
     {
       pic: img2,
-      title: "IdeaTech",
-      link: "https://ideatech.ae/",
-      category: "Tech Solutions",
+      title: "Lawyer",
+      link: "https://lawyer-pi-three.vercel.app/",
+      category: "Law Services",
     },
     {
       pic: img3,
-      title: "IT Services",
-      link: "https://it-service-red.vercel.app/",
-      category: "Web Development",
+      title: "Laundry",
+      link: "https://lundary.vercel.app/",
+      category: "Clothing Brand",
     },
     {
       pic: img4,
-      title: "Organic Cotton",
-      link: "https://organic-cotton.vercel.app/",
-      category: "E-commerce",
+      title: "Charity Blush",
+      link: "https://charity-blush-psi.vercel.app/",
+      category: "Donate",
     },
     {
       pic: img5,
-      title: "Video Meeting",
-      link: "https://ai-meeting-kappa.vercel.app/",
-      category: "Web Application",
+      title: "Car Rental",
+      link: "https://car-rental-yellow.vercel.app/",
+      category: "Travel & Transportation",
     },
     {
       pic: img6,
-      title: "Exclusive Stores",
-      link: "https://exclusive-stores.vercel.app/",
-      category: "E-commerce",
+      title: "Foodymat Restaurant",
+      link: "https://restaurant-rho-ruddy.vercel.app/",
+      category: "Restaurant Service Dining",
     },
   ];
 

@@ -122,7 +122,7 @@ const MyProjects = () => {
                   }`}
                 ></div>
 
-                {/* Project Info */}
+                {/* Projects Infos */}
                 <div className="absolute bottom-0 left-0 p-6 w-full transition-all duration-500 transform translate-y-0 group-hover:-translate-y-2">
                   <span
                     data-aos="fade-right"
@@ -148,7 +148,7 @@ const MyProjects = () => {
                   </div>
                 </div>
 
-                {/* Center Icon on Hover */}
+                {/* Centers Icons on Hovers */}
                 <div
                   className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
                     hoveredProject === index ? "opacity-100" : "opacity-0"
@@ -179,7 +179,7 @@ const MyProjects = () => {
           }
           50% {
             transform: translateY(-20px) translateX(10px);
-          }
+          } 
         }
         .animate-float {
           animation: float 8s ease-in-out infinite;

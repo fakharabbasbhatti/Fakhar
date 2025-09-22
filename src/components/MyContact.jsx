@@ -32,7 +32,7 @@ const MyContact = () => {
     { icon: <MdLocationPin className="text-3xl text-[#38bdf8]" />, text: "Bahawalpur, Punjab, Pakistan", link: "#" },
     { icon: <MdOutlineAlternateEmail className="text-3xl text-[#38bdf8]" />, text: "fakharabbasbhatti333@gmail.com", link: "mailto:fakharabbasbhatti333@gmail.com" },
     { icon: <FaPhoneAlt className="text-3xl text-[#38bdf8]" />, text: "+92 322-9234045", link: "tel:+923086046246" },
-      { icon: <CgWebsite className="text-3xl text-[#38bdf8]" />, text: "https://fakharabbas.com", link: "https://fakharabbas.com" },
+      { icon: <CgWebsite className="text-3xl text-[#38bdf8]" />, text: "https://fakhar-abbas-web.vercel.app/", link: "https://fakhar-abbas-web.vercel.app/" },
   ];
 
   return (

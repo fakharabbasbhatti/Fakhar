@@ -21,7 +21,7 @@ const EducationExperience = () => {
       icon: <FaGraduationCap className="text-white text-2xl" />,
     },
     {
-      title: "Intermediate (FSc)",
+      title: "Intermediate (ICS)",
       period: "2021 - 2023",
       institution: "PostGraduate College, Bahawalpur",
       icon: <FaGraduationCap className="text-white text-2xl" />,

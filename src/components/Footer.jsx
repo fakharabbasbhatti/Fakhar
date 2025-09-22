@@ -1,8 +1,5 @@
-// Footer.jsx
 import React, { useEffect } from "react";
-import { FaUser } from "react-icons/fa";
-import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaHeart } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa6";
+import { FaUser, FaGithub, FaLinkedin, FaEnvelope, FaAngleRight } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -28,22 +25,23 @@ const customerService = [
   { name: "Terms & Conditions", href: "" },
 ];
 
-const Footer = () => {
+export default function Footer() {
   useEffect(() => {
     AOS.init({ offset: 100, duration: 800, easing: "ease-in-out", once: true });
   }, []);
 
   return (
-    <footer className="bg-gray-900 text-white pt-20 pb-12 relative overflow-hidden">
+    <footer className="relative overflow-hidden">
       {/* Floating Background Circles */}
       <div className="absolute -top-16 -left-16 w-72 h-72 bg-[#38bdf8] opacity-10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-[#0ea5e9] opacity-10 rounded-full blur-3xl animate-float-delay"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      {/* Top Section */}
+      <div className="bg-gray-900 text-white relative z-10">
+        <div className="max-w-screen-xl mx-auto grid md:grid-cols-4 sm:grid-cols-2 px-6 py-4 pt-4 gap-10">
           {/* About Me */}
-          <div data-aos="fade-up" className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-6 flex items-center justify-center md:justify-start">
+          <div data-aos="fade-up">
+            <h3 className="text-2xl font-bold mb-4 flex items-center">
               <FaUser className="mr-3 text-[#38bdf8]" /> About Me
             </h3>
             <p className="text-gray-400 leading-relaxed text-lg">
@@ -52,13 +50,13 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div data-aos="fade-up" data-aos-delay="100" className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-6">Quick Links</h3>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="transition-transform duration-300 hover:translate-x-2 flex items-center justify-center md:justify-start text-lg text-gray-400 hover:text-[#38bdf8]"
+                  className="transition-transform duration-300 hover:translate-x-2 flex items-center text-gray-400 hover:text-[#38bdf8]"
                 >
                   <FaAngleRight className="mr-2" />
                   <a href={link.href}>{link.name}</a>
@@ -68,13 +66,13 @@ const Footer = () => {
           </div>
 
           {/* Customer Service */}
-          <div data-aos="fade-up" data-aos-delay="150" className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-6">Customer Service</h3>
+          <div data-aos="fade-up" data-aos-delay="150">
+            <h3 className="text-2xl font-bold mb-4">Customer Service</h3>
             <ul className="space-y-3">
               {customerService.map((link, index) => (
                 <li
                   key={index}
-                  className="transition-transform duration-300 hover:translate-x-2 flex items-center justify-center md:justify-start text-lg text-gray-400 hover:text-[#38bdf8]"
+                  className="transition-transform duration-300 hover:translate-x-2 flex items-center text-gray-400 hover:text-[#38bdf8]"
                 >
                   <FaAngleRight className="mr-2" />
                   <a href={link.href}>{link.name}</a>
@@ -84,9 +82,9 @@ const Footer = () => {
           </div>
 
           {/* Social Media */}
-          <div data-aos="fade-up" data-aos-delay="200" className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-6">Connect With Me</h3>
-            <div className="flex justify-center md:justify-start space-x-6 mb-4">
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h3 className="text-2xl font-bold mb-4">Connect With Me</h3>
+            <div className="flex space-x-6 mb-4">
               {socialLinks.map((social, idx) => (
                 <a
                   key={idx}
@@ -103,15 +101,19 @@ const Footer = () => {
             <p className="text-gray-400">Follow me for updates!</p>
           </div>
         </div>
-
-        {/* Footer Bottom */}
-        <p data-aos="fade-up" className="border-t border-gray-800 pt-8 text-center">
-          Made with <span className="">❤️</span> by <span className="font-bold">Fakhar Abbas</span> &copy; {new Date().getFullYear()}
-        </p>
       </div>
 
+      {/* Bottom Section */}
+      <div className="bg-gray-900 pt-2 pb-6 relative z-10">
+        <div className="flex flex-col items-center max-w-screen-xl mx-auto border-t border-gray-300 pt-5 text-gray-200 text-sm">
+          <p>
+            Made with <span className="text-red-500">❤️</span> by{" "}
+            <span className="font-bold">Fakhar Abbas</span> © {new Date().getFullYear()}
+          </p>
+        </div>
+      </div>
 
-      {/* Floating Circle Animations */}
+      {/* Floating Animations */}
       <style jsx global>{`
         @keyframes float {
           0%, 100% {
@@ -138,6 +140,4 @@ const Footer = () => {
       `}</style>
     </footer>
   );
-};
-
-export default Footer;
+}

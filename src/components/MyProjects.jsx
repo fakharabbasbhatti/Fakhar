@@ -94,7 +94,7 @@ const MyProjects = () => {
             </p>
           </div>
 
-          {/* Projects Grid */}
+          {/* Projects Grids */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {projects.map((project, index) => (
               <div
@@ -106,7 +106,7 @@ const MyProjects = () => {
                 onMouseLeave={() => setHoveredProject(null)}
                 onClick={() => window.open(project.link, "_blank")}
               >
-                {/* Project Image */}
+                {/* Project Images */}
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-2xl">
                   <img
                     src={project.pic}
@@ -115,7 +115,7 @@ const MyProjects = () => {
                   />
                 </div>
 
-                {/* Overlay */}
+                {/* Overlays */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 ${
                     hoveredProject === index ? "opacity-100" : "opacity-0"

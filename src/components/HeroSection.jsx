@@ -24,13 +24,13 @@ const HeroSection = () => {
     },
     {
       icon: <FaLinkedinIn className="h-5 w-5" />,
-      onClick: () => window.open("https://linkedin.com/in/fakhar-abbas-bhatti", "_blank"),
+      onClick: () => window.open("https://linkedin.com/", "_blank"),
       color: "hover:bg-blue-500 hover:shadow-[0_0_15px_#38bdf8]",
       aos: "flip-up",
     },
     {
       icon: <FaGithub className="h-5 w-5" />,
-      onClick: () => window.open("https://github.com/fakharabbasbhatti", "_blank"),
+      onClick: () => window.open("https://github.com/", "_blank"),
       color: "hover:bg-gray-800 hover:shadow-[0_0_15px_#6b7280]",
       aos: "flip-right",
     },
@@ -41,7 +41,7 @@ const HeroSection = () => {
       <section
         id="home"
         className="relative flex justify-center items-center min-h-screen 
-                   px-6 sm:px-8 md:px-12 lg:px-20 bg-gray-900 overflow-hidden pt-10 sm:pt-20"
+                   px-6 sm:px-8 md:px-12 lg:px-20 bg-gray-900 overflow-hidden pt-10 sm:pt-10"
       >
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden">
@@ -57,7 +57,6 @@ const HeroSection = () => {
           ></div>
         </div>
 
-        {/* ✅ Changed flex direction */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 w-full max-w-7xl z-10 py-20">
           {/* Left Section */}
           <div className="w-full md:w-1/2 text-center md:text-start">
@@ -72,7 +71,7 @@ const HeroSection = () => {
               data-aos="fade-right"
               className="text-white text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-4"
             >
-              Fakhar Abbas
+              Kazim Jaffery
             </h1>
 
             <div
@@ -81,7 +80,7 @@ const HeroSection = () => {
             >
               <span className="text-white">
                 <Typewriter
-                  words={["Front-End Developer", "UI/UX Designer", "React Specialist", "Web Enthusiast"]}
+                  words={["App Developer", "React Native Specialist", "Flutter Enthusiast", "Mobile Innovator"]}
                   loop
                   cursor
                   cursorStyle="_"
@@ -96,14 +95,12 @@ const HeroSection = () => {
               data-aos="fade-up"
               className="text-gray-300 text-base sm:text-lg mb-8 max-w-lg mx-auto md:mx-0"
             >
-              I design modern, responsive websites with clean code,<span className="text-[#38bdf8] font-semibold"> fluid animations </span> &
-              <span className="text-[#0ea5e9] font-semibold"> intuitive user experiences, </span>  
-                  delivering engaging digital solutions that merge creativity, performance, and seamless functionality.
+              I build high-quality, responsive mobile applications with smooth performance, <span className="text-[#38bdf8] font-semibold">intuitive interfaces</span> & 
+              <span className="text-[#0ea5e9] font-semibold"> seamless user experiences</span>, delivering apps that engage users and solve real-world problems.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-row gap-3 sm:gap-4 mb-10 justify-center sm:justify-start">
-              {/* Contact Me */}
               <button
                 data-aos="fade-down"
                 className="relative bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] 
@@ -117,7 +114,6 @@ const HeroSection = () => {
                 <span className="z-10">Contact Me</span>
               </button>
 
-              {/* View Projects */}
               <button
                 data-aos="fade-up"
                 className="relative border-2 border-[#38bdf8] text-[#38bdf8] px-4 py-2 sm:px-6 sm:py-3 
@@ -128,7 +124,7 @@ const HeroSection = () => {
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
                                -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-700 ease-in-out"></span>
                 <FaRocket className="z-10" />
-                <span className="z-10">View Projects</span>
+                <span className="z-10">View Apps</span>
               </button>
             </div>
 
@@ -169,16 +165,16 @@ const HeroSection = () => {
               {/* Profile Image */}
               <img
                 src={Hero}
-                alt="Fakhar Abbas profile"
+                alt="Kazim Jaffery profile"
                 className="w-full h-full object-cover rounded-full border-4 border-[#38bdf8] shadow-2xl relative transition-all duration-700 group-hover:scale-105 group-hover:rotate-3 p-3 sm:p-5"
               />
 
               {/* Badges */}
               <div className="absolute top-2 left-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs sm:text-sm md:text-base font-semibold px-3 py-1 rounded-full shadow-lg">
-                Frontend Developer
+                App Developer
               </div>
               <div className="absolute bottom-2 right-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs sm:text-sm md:text-base font-semibold px-3 py-1 rounded-full shadow-lg">
-                WordPress Expert
+                React Native Expert
               </div>
             </div>
           </div>

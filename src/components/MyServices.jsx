@@ -1,10 +1,9 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Fragment, useEffect } from "react";
-import { FaCode, FaServer, FaPlug, FaMobileAlt, FaCloudUploadAlt } from "react-icons/fa";
-import { MdAnimation } from "react-icons/md";
-import { SiFastapi } from "react-icons/si";
-import { SiWordpress } from "react-icons/si";
+import { FaMobileAlt, FaServer, FaCloudUploadAlt, FaTools } from "react-icons/fa";
+import { MdOutlineSecurity, MdAnimation } from "react-icons/md";
+import { SiFlutter, SiReact, SiFirebase, SiFigma } from "react-icons/si";
 
 const MyServices = () => {
   useEffect(() => {
@@ -18,59 +17,84 @@ const MyServices = () => {
 
   const services = [
     {
-      icon: <FaCode className="text-3xl" />,
-      title: "Frontend Development",
-      description: "Building responsive, interactive interfaces with React.js, Tailwind CSS, and Bootstrap to deliver seamless, fast, and engaging digital experiences.",
+      icon: <SiFlutter className="text-3xl" />,
+      title: "Flutter App Development",
+      description: "Cross-platform mobile apps with high performance, smooth UI, and native-like experience using Flutter & Dart.",
       gradient: "from-blue-500 to-cyan-400",
       aosIcon: "zoom-in",
       aosTitle: "fade-right",
       aosDesc: "fade-up"
     },
- {
-      icon: <SiWordpress className="text-3xl" />,
-      title: "WordPress Development",
-      description: "Developing fully customized, scalable websites and blogs with WordPress, leveraging its extensive plugin ecosystem and strong global community support.",
-      gradient: "from-blue-600 to-indigo-500",
-      aosIcon: "zoom-in",
-      aosTitle: "flip-right",
+    {
+      icon: <SiReact className="text-3xl" />,
+      title: "React Native Development",
+      description: "Modern and scalable mobile apps for Android & iOS using React Native with fast performance and reusable UI components.",
+      gradient: "from-cyan-500 to-blue-500",
+      aosIcon: "flip-right",
+      aosTitle: "fade-left",
       aosDesc: "fade-up"
     },
-     {
-      icon: <SiFastapi className="text-3xl" />,
-      title: "API Integration",
-      description: "Seamlessly integrating third-party APIs, secure payment gateways, and robust authentication systems to enhance functionality, scalability, and user experience.",
-      gradient: "from-teal-500 to-emerald-400",
+    {
+      icon: <FaMobileAlt className="text-3xl" />,
+      title: "UI/UX for Mobile Apps",
+      description: "Beautiful, responsive, and user-centric app UI/UX designs created with industry-leading tools like Figma.",
+      gradient: "from-purple-500 to-indigo-400",
       aosIcon: "zoom-in",
       aosTitle: "fade-up",
       aosDesc: "fade-right"
     },
     {
+      icon: <SiFirebase className="text-3xl" />,
+      title: "Firebase Backend",
+      description: "Real-time database, authentication, cloud storage, push notifications, and backend logic with Firebase.",
+      gradient: "from-orange-500 to-yellow-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-left",
+      aosDesc: "fade-up"
+    },
+    {
+      icon: <FaServer className="text-3xl" />,
+      title: "Custom App Backend API",
+      description: "Secure & scalable REST APIs for apps using Node.js, Express, FastAPI, and MongoDB.",
+      gradient: "from-teal-500 to-emerald-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-right",
+      aosDesc: "fade-up"
+    },
+    {
+      icon: <MdOutlineSecurity className="text-3xl" />,
+      title: "App Security & Optimization",
+      description: "Performance improvements, bug fixes, secure authentication, data encryption, and app hardening.",
+      gradient: "from-red-500 to-rose-400",
+      aosIcon: "zoom-in",
+      aosTitle: "flip-left",
+      aosDesc: "fade-up"
+    },
+    {
       icon: <MdAnimation className="text-3xl" />,
-      title: "Immersive Animations",
-      description: "Creating immersive digital experiences through animations, micro-interactions, and motion design using Framer Motion, GSAP, AOS, and advanced CSS techniques.",
+      title: "App Animations & Motion UI",
+      description: "Smooth transitions, micro-interactions, and motion design to enhance user engagement.",
       gradient: "from-indigo-500 to-blue-400",
       aosIcon: "zoom-in",
       aosTitle: "fade-left",
       aosDesc: "fade-up"
     },
-   
-    {
-      icon: <FaMobileAlt className="text-3xl" />,
-      title: "Responsive Design",
-      description: "Ensuring consistent, responsive, and device-friendly layouts with optimized interactions to deliver seamless, user-focused experiences across all platforms.",
-      gradient: "from-sky-500 to-blue-400",
-      aosIcon: "zoom-in",
-      aosTitle: "flip-left",
-      aosDesc: "fade-up"
-    },
-   
     {
       icon: <FaCloudUploadAlt className="text-3xl" />,
-      title: "Deployment & Maintenance",
-      description: "Deploying applications on Vercel, Netlify, and AWS with continuous updates, performance optimizations, robust monitoring, and advanced security enhancements",
+      title: "App Deployment",
+      description: "Publishing apps to Google Play Store and Apple App Store with proper optimization and release management.",
       gradient: "from-violet-500 to-purple-400",
       aosIcon: "zoom-in",
       aosTitle: "fade-down",
+      aosDesc: "fade-up"
+    },
+    {
+      icon: <FaTools className="text-3xl" />,
+      title: "App Maintenance",
+      description: "Regular updates, bug fixing, performance improvements, and new feature integration for long-term app growth.",
+      gradient: "from-green-500 to-lime-400",
+      aosIcon: "zoom-in",
+      aosTitle: "fade-right",
       aosDesc: "fade-up"
     }
   ];
@@ -78,7 +102,6 @@ const MyServices = () => {
   return (
     <Fragment>
       <section id="services" className="relative py-20 px-6 bg-gray-900 overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-40 h-40 bg-[#38bdf8] opacity-10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-0 left-0 w-60 h-60 bg-[#0ea5e9] opacity-10 rounded-full blur-3xl animate-float-delay"></div>
 
@@ -88,14 +111,13 @@ const MyServices = () => {
               data-aos="fade-down"
               className="text-4xl md:text-5xl font-extrabold text-white mb-4 relative inline-block group"
             >
-              Our <span data-aos="zoom-in" data-aos-delay="100" className="text-[#38bdf8]">Services</span>
+              Our <span className="text-[#38bdf8]">App Services</span>
             </h1>
             <p 
               data-aos="fade-up"
-              data-aos-delay="150"
               className="text-gray-400 text-lg max-w-2xl mx-auto"
             >
-              Delivering tailored digital solutions to empower your business growth and innovation.
+              Professional mobile app solutions designed to scale your business.
             </p>
           </div>
 
@@ -120,14 +142,12 @@ const MyServices = () => {
                   
                   <h3 
                     data-aos={service.aosTitle} 
-                    data-aos-delay={index * 150} 
                     className="text-2xl font-semibold text-white mb-3"
                   >
                     {service.title}
                   </h3>
                   <p 
                     data-aos={service.aosDesc} 
-                    data-aos-delay={index * 200} 
                     className="text-gray-300 text-sm md:text-base"
                   >
                     {service.description}
@@ -146,7 +166,7 @@ const MyServices = () => {
         }
         @keyframes float-delay {
           0%, 100% { transform: translateY(0) translateX(0); }
-          50% { transform: translateY(-20px) translateX(10px); }
+          50% { transform: translateY(-20px) translateX(-10px); }
         }
         .animate-float { animation: float 8s ease-in-out infinite; }
         .animate-float-delay { animation: float-delay 10s ease-in-out infinite 2s; }

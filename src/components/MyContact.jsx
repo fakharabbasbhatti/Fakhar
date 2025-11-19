@@ -30,9 +30,9 @@ const MyContact = () => {
 
   const contactInfo = [
     { icon: <MdLocationPin className="text-3xl text-[#38bdf8]" />, text: "Bahawalpur, Punjab, Pakistan", link: "#" },
-    { icon: <MdOutlineAlternateEmail className="text-3xl text-[#38bdf8]" />, text: "fakharabbasbhatti333@gmail.com", link: "mailto:fakharabbasbhatti333@gmail.com" },
-    { icon: <FaPhoneAlt className="text-3xl text-[#38bdf8]" />, text: "+92 322-9234045", link: "tel:+923086046246" },
-      { icon: <CgWebsite className="text-3xl text-[#38bdf8]" />, text: "https://fakhar-abbas-web.vercel.app/", link: "https://fakhar-abbas-web.vercel.app/" },
+    { icon: <MdOutlineAlternateEmail className="text-3xl text-[#38bdf8]" />, text: "info@gmail.com", link: "mailto:info@gmail.com" },
+    { icon: <FaPhoneAlt className="text-3xl text-[#38bdf8]" />, text: "+92 123-456789", link: "tel:+92123456789" },
+      { icon: <CgWebsite className="text-3xl text-[#38bdf8]" />, text: "http://kazim-jaffery-web.vercel.app/", link: "http://kazim-jaffery-web.vercel.app/" },
   ];
 
   return (

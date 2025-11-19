@@ -66,7 +66,7 @@ const Navbar = () => {
             {/* Name Text */}
             <span className="ml-2 text-white font-bold text-xl hidden sm:block relative overflow-hidden">
               <span className="relative z-10 transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#38bdf8] group-hover:to-[#0ea5e9]">
-                Fakhar Abbas
+                 Kazim Jaffery
               </span>
 
               {/* Shiny Sweep on Text */}

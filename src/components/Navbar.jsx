@@ -69,7 +69,7 @@ const Navbar = () => {
                  Kazim Jaffery
               </span>
 
-              {/* Shiny Sweep on Text */}
+              {/* Shinyss Sweeps ons Text */}
               <span className="absolute inset-0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700 ease-in-out skew-x-12 bg-gradient-to-r from-transparent via-white/40 to-transparent"></span>
             </span>
           </motion.div>
